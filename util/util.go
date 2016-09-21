@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/ur-technology/go-ur/common"
 )
 
 var pow256 = common.BigPow(2, 256)

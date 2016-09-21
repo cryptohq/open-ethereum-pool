@@ -3,16 +3,16 @@
     {{#if block.uncle}}
       {{format-number block.height}}
     {{else}}
-      <a href="http://gastracker.io/block/{{block.height}}" rel="nofollow" target="_blank">{{format-number block.height}}</a>
+      {{format-number block.height}}
     {{/if}}
   </td>
   <td>
     {{#if block.uncle}}
-      <a href="http://gastracker.io/block/{{block.hash}}" class="hash" rel="nofollow" target="_blank">{{formatTx block.hash}}</a>
+      {{formatTx block.hash}}
     {{else if block.orphan}}
       <span class="label label-danger">Orphan</span>
     {{else}}
-      <a href="http://gastracker.io/block/{{block.hash}}" class="hash" rel="nofollow" target="_blank">{{formatTx block.hash}}</a>
+      {{formatTx block.hash}}
     {{/if}}
   </td>
   <td>{{format-date-locale block.timestamp}}</td>

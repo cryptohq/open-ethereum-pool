@@ -15,19 +15,19 @@ module.exports = function(environment) {
 
     APP: {
       // API host and port
-      ApiUrl: '//ethteam.com/',
+      ApiUrl: '//POOL_URL/',
 
       // HTTP mining endpoint
-      HttpHost: 'http://etc.ethteam.com',
+      HttpHost: 'POOL_URL',
       HttpPort: 8888,
 
       // Stratum mining endpoint
-      StratumHost: 'etc.ethteam.com',
+      StratumHost: 'POOL_URL',
       StratumPort: 8008,
 
       // Fee and payout details
-      PoolFee: '1%',
-      PayoutThreshold: '0.5 Ether',
+      PoolFee: '0.5%',
+      PayoutThreshold: '0.5 UR',
 
       // For network hashrate (change for your favourite fork)
       BlockTime: 14.4
@@ -38,7 +38,7 @@ module.exports = function(environment) {
     /* Override ApiUrl just for development, while you are customizing
       frontend markup and css theme on your workstation.
     */
-    ENV.APP.ApiUrl = 'http://ethteam.com:8080/'
+    ENV.APP.ApiUrl = 'http://localhost:8080/'
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;

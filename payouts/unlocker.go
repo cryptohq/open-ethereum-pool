@@ -8,11 +8,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/ur-technology/go-ur/common"
 
-	"github.com/sammy007/open-ethereum-pool/rpc"
-	"github.com/sammy007/open-ethereum-pool/storage"
-	"github.com/sammy007/open-ethereum-pool/util"
+	"github.com/cryptohq/open-ethereum-pool/rpc"
+	"github.com/cryptohq/open-ethereum-pool/storage"
+	"github.com/cryptohq/open-ethereum-pool/util"
 )
 
 type UnlockerConfig struct {
@@ -203,7 +203,7 @@ func matchCandidate(block *rpc.GetBlockReply, candidate *storage.BlockData) bool
 }
 
 func (u *BlockUnlocker) handleBlock(block *rpc.GetBlockReply, candidate *storage.BlockData) error {
-	// Initial 5 Ether static reward
+	// Initial 5 UR static reward
 	reward := new(big.Int).Set(constReward)
 
 	correctHeight, err := strconv.ParseInt(strings.Replace(block.Number, "0x", "", -1), 16, 64)
